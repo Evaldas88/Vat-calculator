@@ -7,7 +7,7 @@ const App = () => {
   const [pvm, setPvm] = useState(21);
 
   let amountStr = amount.toFixed(2)
-  let pvmStr = ((amount / 100) * pvm).toFixed(2)
+  let pvmCalc = ((amount / 100) * pvm).toFixed(2)
   let calc = ((((amount / 100) * pvm) + amount)).toFixed(2)
 
   const calc1 = (e) => {
@@ -44,7 +44,7 @@ const App = () => {
                 <p>PVM Suma</p>
               </div>
               <div className="justify-content-md-center col-5">
-                <input class="form-control text-end " type="text" disabled="disabled" value={pvmStr} />
+                <input class="form-control text-end " type="text" disabled="disabled" value={pvmCalc} />
               </div>
             </div>
             <div className="d-flex  pb-2">
